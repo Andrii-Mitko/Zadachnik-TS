@@ -209,15 +209,11 @@
 //? let test2: number = '456';
 //? console.log(test1 + test2);
 
-// видасть помилку
-
 //? №8⊗jstsPmBsOp
 //? Не запуская код определите каким будет результат выполнения кода:
 //? let test1: number = +'123';
 //? let test2: number = +'456';
 //? console.log(test1 + test2);
-
-// 579
 
 //? №9⊗jstsPmBsOp
 //? Не запуская код определите каким будет результат выполнения кода:
@@ -225,11 +221,9 @@
 //? test += 1;
 //? console.log(test);
 
-// 11
-
 // ***************************************************** //
 
-//! Массивы в TypeScript
+//! Массивы в TypeScript.
 
 //; Массивы в TypeScript являются строго типизированными. Это значит, что они могут содержать в себе только данные одного типа.
 //; Тип данных массива определяется двумя способами. Давайте их изучим.
@@ -247,8 +241,8 @@
 //? С помощью первого способа укажите тип данных в следующем массиве:
 //? let arr = [1, 2, 3, 4, 5];
 
-// let arrNum: number[] = [1, 2, 3, 4, 5];
-// console.log(arrNum);
+// let arr: number[] = [1, 2, 3, 4, 5];
+// console.log(arr);
 
 //? №2⊗jstsPmBsAr
 //? С помощью второго способа укажите тип данных в следующем массиве:
@@ -268,8 +262,13 @@
 //? №1⊗jstsPmBsOb
 //? Сделайте объект, содержащий год, месяц и день в соответствующих ключах.
 
-// let objDate = { year: 2026, month: 4, day: 14 };
-// console.log(objDate);
+// const obj = {
+//   year: 2026,
+//   month: "вересень",
+//   day: 27,
+// };
+
+// console.log(obj);
 
 // ***************************************************** //
 
@@ -286,7 +285,7 @@
 //? date = '2025-12-31';
 //? console.log(date);
 
-// 2025-12-31
+// Помилка
 
 // ***************************************************** //
 
@@ -316,7 +315,7 @@
 //? date = {year: 2025, month: 12, date: 7};
 //? console.log(date);
 
-//  Помилка
+// Помилка
 
 // ***************************************************** //
 
@@ -356,7 +355,7 @@
 //? product.price = 123;
 //? console.log(product);
 
-// {code: '123', name: 'apple', price: 123}
+// {code: '123', name: 'apple', price: 123 }
 
 //? №4⊗jstsPmBsOVTC
 //? Не запуская код определите каким будет результат выполнения кода:
@@ -384,8 +383,8 @@
 //? console.log(res);
 
 // let res: number = 0;
-// for (let i = 0; i < 100; i++) {
-// 	res += i;
+// for (let i: number = 0; i < 100; i++) {
+//   res += i;
 // }
 // console.log(res);
 
@@ -408,13 +407,6 @@
 //? }
 //? console.log(res);
 
-//  let arr: number[] = [1, 2, 3, 4, 5];
-//  let res: number = 0;
-//  for (let elem of arr) {
-//  	res += elem;
-//  }
-//  console.log(res);
-
 // ***************************************************** //
 
 //! Цикл for-in в TypeScript
@@ -435,14 +427,6 @@
 //? }
 //? console.log(res);
 
-//  let obj: {[key: string]: number} = {a: 1, b: 2, c: 3};
-//  let res: number = 0;
-//  for (let key in obj) {
-//  	let elem: number = obj[key];
-//  	res += elem;
-//  }
-//  console.log(res);
-
 // ***************************************************** //
 
 //! Функции в TypeScript
@@ -462,11 +446,6 @@
 //? 	return x + y;
 //? }
 
-// function sum1(x:number, y:number): number {
-//  	return x + y;
-// }
-//  console.log(sum1(5, 10));
-
 //? №2⊗jstsPmBsFn
 //? Укажите тип результату и параметрам функции:
 //? function sum(arr) {
@@ -476,15 +455,6 @@
 //? 	}
 //? 	return res;
 //? }
-
-// function sum2(arr: number[]): number {
-//  	let res = 0;
-//  	for (let num of arr) {
-//  		res += num;
-//  	}
-//  	return res;
-// }
-//  console.log(sum2([1, 2, 3, 4, 5]));
 
 // ***************************************************** //
 
@@ -500,11 +470,6 @@
 //? function func(text: string) {
 //? 	console.log(text);
 //? }
-
-//  function func(text: string):void {
-//  	console.log(text);
-// }
-// func('Andrii');
 
 // ***************************************************** //
 
@@ -528,9 +493,6 @@
 //? test3 = test2;
 //? console.log(test3);
 
-// 123
-// abc
-
 // ***************************************************** //
 
 //! Тип any в массивах в TypeScript
@@ -542,9 +504,6 @@
 //? Перепишите следующий код через TypeScript:
 //? let arr = [1, '2', '3', 4, 5];
 //? console.log(arr);
-
-//  let arr: any[] = [1, '2', '3', 4, 5];
-//  console.log(arr);
 
 // ***************************************************** //
 
@@ -565,20 +524,8 @@
 //? №1⊗jstsPmBsTU
 //? Сделайте переменную, которая может быть либо числом, либо null.
 
-// let variable: number | null = 5;
-// console.log(variable);
-// variable = null;
-// console.log(variable);
-
 //? №2⊗jstsPmBsTU
 //? Сделайте переменную, которая может быть либо числом, либо строкой, либо логической.
-
-// let variab: number | string | boolean = 5;
-// console.log(variab);
-// variab = 'five';
-// console.log(variab);
-// variab = true;
-// console.log(variab);
 
 // ***************************************************** //
 
@@ -604,16 +551,8 @@
 //? №1⊗jstsPmBsTA
 //? Создайте новый тип, объединяющий null и undefined.
 
-// type tup = null | undefined;
-// let x: tup = null;
-// console.log(x);
-
 //? №2⊗jstsPmBsTA
 //? Создайте новый тип, объединяющий логический тип, null и undefined.
-
-// type tups = boolean | null | undefined;
-// let y: tups = null;
-// console.log(y);
 
 // ***************************************************** //
 
@@ -631,10 +570,6 @@
 //? №1⊗jstsPmBsSLT
 //? Сделайте так, чтобы переменная могла принимать одно из трех значений: 'error', 'warning' или 'success'.
 
-// type x = 'error' |  'warning' | 'success';
-// let y: x = 'error';
-// console.log(y);
-
 // ***************************************************** //
 
 //! Псевдонимы для объединения строк в TypeScript
@@ -648,11 +583,6 @@
 
 //? №1⊗jstsPmBsSLA
 //? Сделайте тип данных, который будет разрешать переменной принимать одно из трех значений: 'error', 'warning' или 'success'.
-
-// type Answer = 'error' | 'warning' | 'success';
-// let answer: Answer;
-// answer = 'error';
-// console.log(answer);
 
 // ***************************************************** //
 
@@ -670,20 +600,11 @@
 //? №1⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года и номер месяца.
 
-// const dateNum: [number, number] = [2026, 4];
-// console.log(dateNum);
-
 //? №2⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года и название месяца.
 
-// const dateStr: [number, string] = [2026, "April"];
-// console.log(dateStr);
-
 //? №3⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года, номер месяца и номер дня.
-
-// const dateFull: [number, number, number] = [2026, 4, 17];
-// console.log(dateFull);
 
 // ***************************************************** //
 
@@ -703,15 +624,11 @@
 //? time[0] = 13;
 //? console.log(time);
 
-// [13, 59, 59]
-
 //? №2⊗jstsPmTpCh
 //? Расскажите, каким будет результат выполнения следующего кода:
 //? let time: [number, number, number] = [12, 59, 59];
 //? time[0] = '01';
 //? console.log(time);
-
-// Помилка
 
 // ***************************************************** //
 
@@ -727,8 +644,6 @@
 //? let time: readonly [number, number, number] = [12, 59, 59];
 //? time[0] = 13;
 //? console.log(time);
-
-// Помилка
 
 // ***************************************************** //
 
@@ -746,12 +661,6 @@
 //? Заполните данными следующий кортеж:
 //? let date: [number, number?, number?];
 
-// let date: [number, number?, number?];
-// date = [1, 2, 3];
-// date = [1, 2];
-// date = [2];
-// console.log(date);
-
 // ***************************************************** //
 
 //! Деструктуризация кортежа в TypeScript
@@ -765,10 +674,6 @@
 //? Дан следующий кортеж:
 //? let time: [number, number, number] = [12, 59, 59];
 //? Разбейте части времени в отдельные переменные.
-
-// let time: [number, number, number] = [12, 59, 59];
-// let [hours, minutes, seconds] = time;
-// console.log([hours, minutes, seconds]);
 
 // ***************************************************** //
 
@@ -784,17 +689,9 @@
 //? Заполните данными следующий кортеж:
 //? let tpl: [string, string, ...number[]];
 
-// type Tpl = [string, string, ...number[]];
-// let tpl: Tpl = ["Andrii", "Mitko", 1, 2, 3, 4, 5];
-// console.log(tpl);
-
 //? №2⊗jstsPmTpFl
 //? Заполните данными следующий кортеж:
 //? let tpl: [number, boolean, ...string[]];
-
-// type Tpl = [number, boolean, ...string[]];
-// let tpl: Tpl = [25, true, "Andrii", "Mitko"];
-// console.log(tpl);
 
 // ***************************************************** //
 
@@ -807,18 +704,6 @@
 
 //? №1⊗jstsPmEnInr
 //? Сделайте перечисление, содержащее дни недели.
-
-// enum DaysOfTheWeek {
-//   Monday = "Понідолок",
-//   Tuesday = "Вівторок",
-//   Wednesday = "Середа",
-//   Thursday = "Четверг",
-//   Friday = "П'ятниця",
-//   Saturday = "Субота",
-//   Sunday = "Неділя",
-// }
-// let day = DaysOfTheWeek.Friday;
-// console.log(day);
 
 // ***************************************************** //
 
@@ -835,8 +720,6 @@
 //? let myFruit: string = Fruits[2];
 //? console.log(myFruit);
 
-// Oranges
-
 // ***************************************************** //
 
 //! Ключ перечисления по значению в TypeScript
@@ -850,8 +733,6 @@
 //? enum Fruits { Apples, Bananas, Oranges, Grapes };
 //? let myFruit: number = Fruits.Apples;
 //? console.log(myFruit);
-
-// 0
 
 // ***************************************************** //
 
@@ -886,24 +767,6 @@
 //? №1⊗jstsPmEnEK
 //? Сделайте перечисление Months и задайте в нем номера всем месяцам в году. Выведите в консоль первый и пятый месяцы.
 
-// enum Months {
-//   January = 1,
-//   February = 2,
-//   March = 3,
-//   April = 4,
-//   May = 5,
-//   June = 6,
-//   July = 7,
-//   August = 8,
-//   September = 9,
-//   October = 10,
-//   November = 11,
-//   December = 12,
-// }
-// const monthFirst = Months.January;
-// const monthFive = Months.May;
-// console.log(monthFirst, monthFive);
-
 // ***************************************************** //
 
 //! Упрощенные ключи в TypeScript
@@ -919,8 +782,6 @@
 //? enum Fruits { Apples = 1, Bananas, Oranges, Grapes };
 //? let myFruit: Fruits = Fruits.Grapes;
 //? console.log(myFruit);
-
-// 4
 
 // ***************************************************** //
 
@@ -940,35 +801,8 @@
 //? №1⊗jstsPmEnSt
 //? Сделайте перечисление с названиями дней недели.
 
-// enum DaysOfTheWeek {
-//   Monday = "day 1",
-//   Tuesday = "day 2",
-//   Wednesday = "day 3",
-//   Thursday = "day 4",
-//   Friday = "day 5",
-//   Saturday = "day 6",
-//   Sunday = "day 7",
-// }
-// console.log(DaysOfTheWeek.Friday);
-
 //? №2⊗jstsPmEnSt
 //? Сделайте перечисление с названиями месяцев.
-
-// enum Months {
-//   January = "month 1",
-//   February = "month 2",
-//   March = "month 3",
-//   April = "month 4",
-//   May = "month 5",
-//   June = "month 6",
-//   July = "month 7",
-//   August = "month 8",
-//   September = "month 9",
-//   October = "month 10",
-//   November = "month 11",
-//   December = "month 12",
-// }
-// console.log(Months.April);
 
 // ***************************************************** //
 
@@ -992,9 +826,6 @@
 //? №1⊗jstsPmIbDt
 //? Сделайте переменную, которая будет содержать объект с датой.
 
-// let date: Date = new Date();
-// console.log(date);
-
 // ***************************************************** //
 
 //! Регулярки в TypeScript
@@ -1008,9 +839,6 @@
 
 //? №1⊗jstsPmIbRg
 //? Сделайте переменную, которая будет содержать регулярное выражение.
-
-// const reg: RegExp = /\d+/;
-// console.log(reg);
 
 // ***************************************************** //
 
@@ -1030,24 +858,11 @@
 //? №1⊗jstsPmIbHE
 //? Сделайте переменную, которая будет содержать promise.
 
-// let promise: Promise<number> = new Promise((resolve) => {
-//   resolve(42);
-// });
-// console.log(promise);
-
 //? №2⊗jstsPmIbHE
 //? Сделайте переменную, которая будет содержать DOM элемент.
 
-// let element: HTMLElement = document.body;
-// console.log(element);
-
 //? №3⊗jstsPmIbHE
 //? Сделайте переменную, которая будет содержать ссылку на тег ul.
-
-// const ul: HTMLUListElement | null = document.querySelector("ul");
-// if (ul) {
-//   console.log(ul);
-// }
 
 // ***************************************************** //
 
@@ -1063,27 +878,14 @@
 //? №1⊗jstsPmIbCl
 //? Сделайте переменную, которая будет содержать коллекцию Map.
 
-// const maps = new Map<number, string>();
-// console.log(maps);
-
 //? №2⊗jstsPmIbCl
 //? Сделайте переменную, которая будет содержать коллекцию Set.
-
-// const sets = new Set<string>();
-// console.log(sets);
 
 //? №3⊗jstsPmIbCl
 //? Сделайте переменную, которая будет содержать коллекцию NodeList.
 
-// const lst: NodeListOf<HTMLElement> = document.querySelectorAll("div");
-// console.log(lst);
-
 //? №4⊗jstsPmIbCl
 //? Сделайте переменную, которая будет содержать коллекцию HTMLCollection.
-
-// const lsts: HTMLCollectionOf<HTMLElement> =
-//   document.getElementsByTagName("div");
-// console.log(lsts);
 
 // ***************************************************** //
 
@@ -1104,8 +906,6 @@
 //? let date: {year: number, month: number, day: number};
 //? date = {year: 2025, month: 12, day: '01'};
 
-// Помилка
-
 // ***************************************************** //
 
 //! Необязательные свойства объекта в TypeScript
@@ -1122,8 +922,6 @@
 //? Не запуская код определите каким будет результат выполнения кода:
 //? let date = {year: number, month: number, day?: number};
 //? date = {year: 2025, month: 12};
-
-// Помилка
 
 // ***************************************************** //
 
@@ -1147,28 +945,6 @@
 //? 	salaryday: number
 //? }
 
-// interface Employee {
-//   name: string;
-//   age: number;
-//   salaryday: number;
-// }
-// const employee: Employee = {
-//   name: "Valentina",
-//   age: 49,
-//   salaryday: 3000,
-// };
-// const employee2: Employee = {
-//   name: "Andrii",
-//   age: 50,
-//   salaryday: 25000,
-// };
-// const employee3: Employee = {
-//   name: "Nika",
-//   age: 25,
-//   salaryday: 45000,
-// };
-// console.log(employee, employee2, employee3);
-
 //? №2⊗jstsPmDSIn
 //? Создайте три объекта, реализующих следующий интерфейс:
 //? interface Time {
@@ -1176,28 +952,6 @@
 //? 	minute: number,
 //? 	second: number
 //? }
-
-// interface Time {
-//   hour: number;
-//   minute: number;
-//   second: number;
-// }
-// const time: Time = {
-//   hour: 18,
-//   minute: 54,
-//   second: 40,
-// };
-// const time2: Time = {
-//   hour: 19,
-//   minute: 15,
-//   second: 50,
-// };
-// const time3: Time = {
-//   hour: 18,
-//   minute: 45,
-//   second: 20,
-// };
-// console.log(time, time2, time3);
 
 // ***************************************************** //
 
@@ -1217,16 +971,6 @@
 //? №1⊗jstsPmDSAIO
 //? Сделайте объект со страной, содержащий название страницы и массив ее городов.
 
-// interface Country {
-//   country: string;
-//   city: string[];
-// }
-// const cityOfCountry: Country = {
-//   country: "Ukraine",
-//   city: ["Kyiv", "Lviv", "Odesa", "Kharkiv", "Dnipro", "Zaporizhzhia"],
-// };
-// console.log(cityOfCountry);
-
 // ***************************************************** //
 
 //! Интерфейс как тип объекта с массивом TypeScript
@@ -1245,16 +989,6 @@
 
 //? №1⊗jstsPmDSOAI
 //? Сделайте объект со страной, содержащий название сталицы и массив ее городов.
-
-// interface Country {
-//   capital: string;
-//   city: string[];
-// }
-// const countryKyiv: Country = {
-//   capital: "Kyiv",
-//   city: ["Lviv", "Odesa", "Kharkiv", "Dnipro", "Zaporizhzhia"],
-// };
-// console.log(countryKyiv);
 
 // ***************************************************** //
 
@@ -1291,22 +1025,6 @@
 //? };
 //? Сделайте интерфейс, описывающий структуру этого объекта.
 
-// interface Event {
-//   name: string;
-//   time: {
-//     start: string;
-//     finish: string;
-//   }
-// }
-// let event: Event = {
-//   name: "my new event",
-//   time: {
-//     start: "2025-11-01",
-//     finish: "2025-12-31",
-//   },
-// };
-// console.log(event);
-
 //? №2⊗jstsPmDSCO
 //? Дан объект:
 //? let employee {
@@ -1321,33 +1039,6 @@
 //? 	}
 //? };
 //? Сделайте интерфейс, описывающий структуру этого объекта.
-
-// interface Position {
-//   name: string;
-//   salary: number;
-// }
-// interface Addr {
-//   country: string;
-//   city: string;
-// }
-// interface Employee {
-//   name: string;
-//   potision: Position;
-//   addr: Addr;
-// }
-
-// let employee: Employee = {
-//   name: "andrew",
-//   potision: {
-//     name: "programmer",
-//     salary: 1000,
-//   },
-//   addr: {
-//     country: "belarus",
-//     city: "minsk",
-//   },
-// };
-// console.log(employee);
 
 // ***************************************************** //
 
@@ -1396,33 +1087,6 @@
 //? };
 //? Сделайте интерфейс, описывающий структуру этого объекта. Вынесите вложенные объекты в отдельные интерфейсы.
 
-// interface Position {
-//   name: string;
-//   salary: number;
-// }
-// interface Addr {
-//   country: string;
-//   city: string;
-// }
-// interface Employee {
-//   name: string;
-//   position: Position;
-//   addr: Addr;
-// }
-
-// let employee: Employee = {
-//   name: "andrew",
-//   position: {
-//     name: "programmer",
-//     salary: 1000,
-//   },
-//   addr: {
-//     country: "belarus",
-//     city: "minsk",
-//   },
-// };
-// console.log(employee);
-
 //? №2⊗jstsPmDSOOb
 
 //? Дан объект:
@@ -1444,41 +1108,6 @@
 //? 	}
 //? }
 //? Сделайте интерфейс, описывающий структуру этого объекта. Вынесите вложенные объекты в отдельные интерфейсы.
-
-// interface Parent {
-//   name: string;
-//   age: number;
-//   parents: null;
-// }
-
-// interface Parents {
-//   mother: Parent;
-//   father: Parent;
-// }
-
-// interface User {
-//   name: string;
-//   age: number;
-//   parents: Parents;
-// }
-
-// let user: User = {
-//   name: "john",
-//   age: 30,
-//   parents: {
-//     mother: {
-//       name: "jane",
-//       age: 30,
-//       parents: null,
-//     },
-//     father: {
-//       name: "eric",
-//       age: 30,
-//       parents: null,
-//     },
-//   },
-// };
-// console.log(user);
 
 // ***************************************************** //
 
@@ -1522,37 +1151,13 @@
 
 //? Сделайте массив, элементы которого будут регулярными выражениями.
 
-// const arr: RegExp[] = [/abc/, /test/, /\d+/];
-// console.log(arr);
-
 //? №2⊗jstsPmDSAOO
 
 //? Сделайте массив, элементы которого будут промисами.
 
-// const arr2: Promise<number>[] = [];
-// console.log(arr2);
-
 //? №3⊗jstsPmDSAOO
 
 //? Сделайте интерфейс, описывающий работника. Сделайте массив, состоящий из объектов с этими работниками.
-
-// interface Worker {
-//   name: string;
-//   age: number;
-// }
-
-// const arrWork: Worker[] = [
-//   {
-//     name: "john",
-//     age: 30,
-//   },
-//   {
-//     name: "Andrii",
-//     age: 50,
-//   },
-// ];
-
-// console.log(arrWork);
 
 // ***************************************************** //
 
@@ -1583,10 +1188,6 @@
 //? func(1);
 //? func(1, 2, 3);
 //? func(1, 2);
-
-// func(1); // Помилка
-// func(1, 2, 3); // Помилка
-// func(1, 2); // 3
 
 // ***************************************************** //
 
@@ -1630,27 +1231,6 @@
 
 //? Сделайте функцию, которая принимать параметрами день, месяц и год, и возвращать день недели, соответствующий этой дате. Пусть все три параметра будут не обязательными. Если какой-то параметр не передан, он должен принять значение, соответствующее текущей дате.
 
-// function dateWeek(year?: number, month?: number, day?: number) {
-//   const dayWeekArr: string[] = [
-//     "Sun",
-//     "Mon",
-//     "Tue",
-//     "Wed",
-//     "Thu",
-//     "Fri",
-//     "Sat",
-//   ];
-
-//   let y = year ?? new Date().getFullYear();
-//   let m = month ?? new Date().getMonth();
-//   let d = day ?? new Date().getDate();
-
-//   const dayW = new Date(y, m, d).getDay();
-//   return dayWeekArr[dayW];
-// }
-
-// console.log(dateWeek());
-
 // ***************************************************** //
 
 //!Значения параметров по умолчанию в TypeScript
@@ -1671,11 +1251,6 @@
 
 //? Сделайте функцию, которая будет возводить число в заданную степень. Пусть первым параметром функция принимает число, а вторым - степень. Пусть второй параметр будет необязательным, и по умолчанию функция возводит число во вторую степень.
 
-// function fooNumbers(num: number, power: number = 2): number {
-//   return num ** power;
-// }
-// console.log(fooNumbers(3, 3));
-
 // ***************************************************** //
 
 //! Rest параметры функции в TypeScript
@@ -1692,11 +1267,6 @@
 //? №1⊗jstsPmFnRP
 
 //? Сделайте функцию, которая параметрами принимает любое количество чисел, а возвращает их сумму.
-
-// function SumNum(...num: number[]): number {
-//   return num.reduce((n, num) => n + num, 0);
-// }
-// console.log(SumNum(1, 2, 3));
 
 // ***************************************************** //
 
@@ -1720,11 +1290,6 @@
 //? let func = function(text: string): void {
 //? 	alert(text);
 //? };
-
-// let func: (text: string) => void = function (text) {
-//   alert(text);
-// };
-// func("str");
 
 // ***************************************************** //
 
