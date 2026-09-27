@@ -407,6 +407,13 @@
 //? }
 //? console.log(res);
 
+// let arr: number[] = [1, 2, 3, 4, 5];
+// let res: number = 0;
+// for (let elem of arr) {
+//   res += elem;
+// }
+// console.log(res);
+
 // ***************************************************** //
 
 //! Цикл for-in в TypeScript
@@ -427,6 +434,14 @@
 //? }
 //? console.log(res);
 
+// let obj: { [key: string]: number } = { a: 1, b: 2, c: 3 };
+// let res: number = 0;
+// for (let key in obj) {
+//   let elem = obj[key];
+//   res += elem;
+// }
+// console.log(res);
+
 // ***************************************************** //
 
 //! Функции в TypeScript
@@ -446,6 +461,11 @@
 //? 	return x + y;
 //? }
 
+// function sum1(x: number, y: number): number {
+//   return x + y;
+// }
+// console.log(sum1(2, 3));
+
 //? №2⊗jstsPmBsFn
 //? Укажите тип результату и параметрам функции:
 //? function sum(arr) {
@@ -455,6 +475,15 @@
 //? 	}
 //? 	return res;
 //? }
+
+// function sum2(arr: number[]): number {
+//   let res: number = 0;
+//   for (let num of arr) {
+//     res += num;
+//   }
+//   return res;
+// }
+// console.log(sum2([1, 2, 3]));
 
 // ***************************************************** //
 
@@ -470,6 +499,11 @@
 //? function func(text: string) {
 //? 	console.log(text);
 //? }
+
+// function func(text: string): void {
+//   console.log(text);
+// }
+// func("Andrii");
 
 // ***************************************************** //
 
@@ -493,6 +527,9 @@
 //? test3 = test2;
 //? console.log(test3);
 
+// 123;
+// 'abc';
+
 // ***************************************************** //
 
 //! Тип any в массивах в TypeScript
@@ -504,6 +541,12 @@
 //? Перепишите следующий код через TypeScript:
 //? let arr = [1, '2', '3', 4, 5];
 //? console.log(arr);
+
+// let arr1: any[] = [1, "2", "3", 4, 5];
+// console.log(arr1);
+
+// let arr2: Array<number | string> = [1, "2", "3", 4, 5];
+// console.log(arr2);
 
 // ***************************************************** //
 
@@ -524,8 +567,14 @@
 //? №1⊗jstsPmBsTU
 //? Сделайте переменную, которая может быть либо числом, либо null.
 
+// let vari: number | null = 0;
+// console.log(vari);
+
 //? №2⊗jstsPmBsTU
 //? Сделайте переменную, которая может быть либо числом, либо строкой, либо логической.
+
+// let varis: number | string | boolean = 0;
+// console.log(varis);
 
 // ***************************************************** //
 
@@ -551,8 +600,20 @@
 //? №1⊗jstsPmBsTA
 //? Создайте новый тип, объединяющий null и undefined.
 
+// type NullUnd = null | undefined;
+// const num: NullUnd = null;
+// console.log(num);
+
 //? №2⊗jstsPmBsTA
 //? Создайте новый тип, объединяющий логический тип, null и undefined.
+
+// type Unifying1 = NullUnd | boolean;
+// const yes1: Unifying1 = true;
+// console.log(yes1);
+
+// type Unifying2 = null | undefined | boolean;
+// const yes2: Unifying2 = true;
+// console.log(yes2);
 
 // ***************************************************** //
 
@@ -570,6 +631,10 @@
 //? №1⊗jstsPmBsSLT
 //? Сделайте так, чтобы переменная могла принимать одно из трех значений: 'error', 'warning' или 'success'.
 
+// type Str = "error" | "warning" | "success";
+// const str: Str = "warning";
+// console.log(str);
+
 // ***************************************************** //
 
 //! Псевдонимы для объединения строк в TypeScript
@@ -583,6 +648,10 @@
 
 //? №1⊗jstsPmBsSLA
 //? Сделайте тип данных, который будет разрешать переменной принимать одно из трех значений: 'error', 'warning' или 'success'.
+
+// type Str = "error" | "warning" | "success";
+// const str: Str = "warning";
+// console.log(str);
 
 // ***************************************************** //
 
@@ -600,11 +669,20 @@
 //? №1⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года и номер месяца.
 
+// const time1: [number, number] = [2026, 9];
+// console.log(time1);
+
 //? №2⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года и название месяца.
 
+// const time2: [number, string] = [2026, "вересень"];
+// console.log(time2);
+
 //? №3⊗jstsPmTpInr
 //? Сделайте кортеж, который будет хранить номер года, номер месяца и номер дня.
+
+// const time3: [number, number, number] = [2026, 9, 27];
+// console.log(time3);
 
 // ***************************************************** //
 
@@ -624,11 +702,15 @@
 //? time[0] = 13;
 //? console.log(time);
 
+// [13, 59, 59]
+
 //? №2⊗jstsPmTpCh
 //? Расскажите, каким будет результат выполнения следующего кода:
 //? let time: [number, number, number] = [12, 59, 59];
 //? time[0] = '01';
 //? console.log(time);
+
+// Помилка
 
 // ***************************************************** //
 
@@ -644,6 +726,8 @@
 //? let time: readonly [number, number, number] = [12, 59, 59];
 //? time[0] = 13;
 //? console.log(time);
+
+// Помилка
 
 // ***************************************************** //
 
@@ -661,6 +745,31 @@
 //? Заполните данными следующий кортеж:
 //? let date: [number, number?, number?];
 
+// let date1: [number, number?, number?] = [27];
+
+// let date2: [number, number?, number?] = [27, 9];
+
+// let date3: [number, number?, number?] = [27, 9, 2026];
+
+// console.log(date1, date2, date3);
+
+// ***************************************************** //
+
+//! Кортеж для чтения в TypeScript
+
+//; Можно создавать кортежи только для чтения, элементы которого нельзя изменить. Для этого перед типом кортежа указывается ключевое слово readonly:
+//; let user: readonly [string, number] = ['john', 31];
+//; Попытка изменить такой кортеж приведет к ошибке:
+//; user[0] = 'eric'; // ошибка
+
+//? №1⊗jstsPmTpRo
+//? Расскажите, каким будет результат выполнения следующего кода:
+//? let time: readonly [number, number, number] = [12, 59, 59];
+//? time[0] = 13;
+//? console.log(time);
+
+// Помилка
+
 // ***************************************************** //
 
 //! Деструктуризация кортежа в TypeScript
@@ -674,6 +783,10 @@
 //? Дан следующий кортеж:
 //? let time: [number, number, number] = [12, 59, 59];
 //? Разбейте части времени в отдельные переменные.
+
+// let time: [number, number, number] = [12, 59, 59];
+// let [hours, minutes, seconds] = time;
+// console.log(hours, minutes, seconds);
 
 // ***************************************************** //
 
@@ -689,9 +802,21 @@
 //? Заполните данными следующий кортеж:
 //? let tpl: [string, string, ...number[]];
 
+// let tpl1: [string, string, ...number[]] = [
+//   "строка один",
+//   "строка 2",
+//   12,
+//   3,
+//   2026,
+// ];
+// console.log(tpl1);
+
 //? №2⊗jstsPmTpFl
 //? Заполните данными следующий кортеж:
 //? let tpl: [number, boolean, ...string[]];
+
+// let tpl2: [number, boolean, ...string[]] = [26, true, "26", "true", "string"];
+// console.log(tpl2);
 
 // ***************************************************** //
 
@@ -704,6 +829,17 @@
 
 //? №1⊗jstsPmEnInr
 //? Сделайте перечисление, содержащее дни недели.
+
+// enum DayWeek {
+//   Monday,
+//   Tuesday,
+//   Wednesday,
+//   Thursday,
+//   Friday,
+//   Saturday,
+//   Sunday,
+// }
+// console.log(DayWeek[6]);
 
 // ***************************************************** //
 
@@ -720,6 +856,8 @@
 //? let myFruit: string = Fruits[2];
 //? console.log(myFruit);
 
+// Oranges
+
 // ***************************************************** //
 
 //! Ключ перечисления по значению в TypeScript
@@ -733,6 +871,8 @@
 //? enum Fruits { Apples, Bananas, Oranges, Grapes };
 //? let myFruit: number = Fruits.Apples;
 //? console.log(myFruit);
+
+// 0
 
 // ***************************************************** //
 
@@ -767,6 +907,23 @@
 //? №1⊗jstsPmEnEK
 //? Сделайте перечисление Months и задайте в нем номера всем месяцам в году. Выведите в консоль первый и пятый месяцы.
 
+// enum Months {
+//   Cічень = 1,
+//   Лютий = 2,
+//   Березень = 3,
+//   Квітень = 4,
+//   Травень = 5,
+//   Червень = 6,
+//   Липень = 7,
+//   Серпень = 8,
+//   Вересень = 9,
+//   Жовтень = 10,
+//   Листопад = 11,
+//   Грудень = 12,
+// }
+
+// console.log(Months[1], Months[5]);
+
 // ***************************************************** //
 
 //! Упрощенные ключи в TypeScript
@@ -782,6 +939,8 @@
 //? enum Fruits { Apples = 1, Bananas, Oranges, Grapes };
 //? let myFruit: Fruits = Fruits.Grapes;
 //? console.log(myFruit);
+
+// 4
 
 // ***************************************************** //
 
