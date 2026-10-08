@@ -2,10 +2,8 @@
 // Высший учебник
 //! =================================================
 
-
 // Введение в ООП в TypeScript
 // В TypeScript реализована более продвинутая работа с ООП, чем в чистом JavaScript. В данном разделе мы будем разбирать отличия. Предполагается, что вы уже знаете ООП в чистом JavaScript. Давайте приступим!
-
 
 //! =================================================
 
@@ -13,7 +11,7 @@
 // Как вы уже знаете, классы являются главными элементами ООП. В TypeScript класс задается с помощью ключевого слова class, далее пишется его имя с большой буквы. Давайте для примера объявим класс User:
 
 // class User {
-	
+
 // }
 // №1⊗tsSpOpCls
 
@@ -25,7 +23,7 @@
 // Пусть у нас есть следующий класс User:
 
 // class User {
-	
+
 // }
 // Давайте создадим объект этого класса:
 
@@ -79,7 +77,7 @@
 
 // class User {
 // 	name: string = '';
-	
+
 // 	getName(): string {
 // 		return this.name;
 // 	}
@@ -88,11 +86,11 @@
 
 // class User {
 // 	name: string = '';
-	
+
 // 	getName(): string {
 // 		return this.name;
 // 	}
-	
+
 // 	setName(name: string): void {
 // 		this.name = name;
 // 	}
@@ -108,7 +106,7 @@
 
 // class User {
 // 	name: string = '';
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -117,7 +115,7 @@
 
 // class User {
 // 	name: string; // не задаем значение
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -132,7 +130,6 @@
 
 // Создайте класс Employee, в конструктор которого передайте имя, фамилию, возраст и зарплату работника.
 
-
 //! =================================================
 
 // Наследование ООП классов в TypeScript
@@ -142,7 +139,7 @@
 
 // class User {
 // 	name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -151,7 +148,7 @@
 
 // class Student extends User {
 // 	course: number;
-	
+
 // 	constructor(name: string, course: number) {
 // 		super(name);
 // 		this.course = course;
@@ -200,7 +197,7 @@
 
 // class User {
 // 	private name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -218,15 +215,15 @@
 
 // class User {
 // 	private name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
-	
+
 // 	public getName() {
 // 		return this.name; // прочитаем свойство
 // 	}
-	
+
 // 	public setName(name: string) {
 // 		this.name = name; // запишем новое значение свойства
 // 	}
@@ -260,7 +257,7 @@
 
 // class Student extends User {
 // 	private name: string;
-	
+
 // 	constructor(name: string) {
 // 		super();
 // 		this.name = name;
@@ -270,12 +267,12 @@
 
 // class Student extends User {
 // 	private name: string;
-	
+
 // 	constructor(name: string) {
 // 		super();
 // 		this.name = name;
 // 	}
-	
+
 // 	public showName(): string {
 // 		return this.name;
 // 	}
@@ -284,12 +281,12 @@
 
 // class Student extends User {
 // 	private name: string;
-	
+
 // 	constructor(name: string) {
 // 		super();
 // 		this.name = name;
 // 	}
-	
+
 // 	public showName(): string {
 // 		return this.cape(this.name); // используем метод родителя
 // 	}
@@ -310,7 +307,7 @@
 // class User {
 // 	protected name: string;
 // 	protected surn: string;
-	
+
 // 	constructor(name: string, surn: string) {
 // 		this.name = name;
 // 		this.surn = surn;
@@ -325,7 +322,7 @@
 
 // class User {
 // 	readonly name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -352,11 +349,11 @@
 
 // class User {
 // 	private name: string = '';
-	
+
 // 	public set name(name: string) { // выдаст ошибку
 // 		this.name = name;
 // 	}
-	
+
 // 	public get name(): string {
 // 		return this.name;
 // 	}
@@ -365,11 +362,11 @@
 
 // class User {
 // 	private _name: string = '';
-	
+
 // 	public set name(name: string) {
 // 		this._name = name;
 // 	}
-	
+
 // 	public get name(): string {
 // 		return this._name;
 // 	}
@@ -394,7 +391,7 @@
 // class User {
 // 	public name: string;
 // 	public static salary: number = 1000;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -416,7 +413,7 @@
 // class User {
 // 	public name: string;
 // 	public static salary: number = 1000;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -426,11 +423,11 @@
 // class User {
 // 	public name: string;
 // 	public static salary: number = 1000;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
-	
+
 // 	getSalary(): number {
 // 		return User.salary; // обращаемся по имени класса
 // 	}
@@ -440,15 +437,15 @@
 // class User {
 // 	public name: string;
 // 	public static salary: number = 1000;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
-	
+
 // 	getSalary(): number {
 // 		return User.salary;
 // 	}
-	
+
 // 	setSalary(salary: number) {
 // 		User.salary = salary;
 // 	}
@@ -482,11 +479,11 @@
 // class Calc {
 // 	public static getSum(arr: number[]): number {
 // 		let sum: number = 0;
-		
+
 // 		for (let elem of arr) {
 // 			sum += elem;
 // 		}
-		
+
 // 		return sum;
 // 	}
 // }
@@ -511,7 +508,7 @@
 
 // abstract class User {
 // 	public name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
@@ -559,11 +556,11 @@
 
 // abstract class User {
 // 	public name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
-	
+
 // 	public abstract show(): string;
 // }
 // Реализуем этот метод в классе-потомке Student:
@@ -575,7 +572,7 @@
 // 		super(name);
 // 		this.course = course;
 // 	}
-	
+
 // 	show() {
 // 		return this.name + ' ' + this.course;
 // 	}
@@ -589,7 +586,7 @@
 // 		super(name);
 // 		this.salary = salary;
 // 	}
-	
+
 // 	show() {
 // 		return this.name + ' ' + this.salary;
 // 	}
@@ -612,7 +609,7 @@
 // Давайте, например, сделаем интерфейс IUser, описывающий юзера:
 
 // interface IUser {
-	
+
 // }
 // В следующих уроках мы подробно рассмотрим особенности работы с интерфейсами.
 
@@ -622,7 +619,7 @@
 // Пусть у нас есть интерфейс, описывающий юзера:
 
 // interface IUser {
-	
+
 // }
 // Давайте добавим в этот интерфейс свойства и их тип:
 
@@ -842,11 +839,11 @@
 
 // class User implements IUser {
 // 	name: string;
-	
+
 // 	constructor(name: string) {
 // 		this.name = name;
 // 	}
-	
+
 // 	greet() {
 // 		return `hello, ${this.name}!`;
 // 	}
@@ -879,7 +876,7 @@
 // 	height: number;
 // 	width: number;
 // 	color: string;
-	
+
 // 	constructor(height: number, width: number, color: string) {
 // 		this.height = height;
 // 		this.width  = width;
