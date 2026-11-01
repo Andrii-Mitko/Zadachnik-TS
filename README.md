@@ -62,4 +62,4 @@ Zadachnik-TS/
 
 ---
 
-**Автор:** [Andrii Mitko](https://github.com/Andrii-Mitko)
+**Автор:** [Andrii Mitko](https://github.com/Andrii-Mitko) · [Portfolio](https://andrii-mitko-brand.vercel.app/)
